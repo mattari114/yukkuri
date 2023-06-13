@@ -19,17 +19,21 @@
       <table>
         <tr>
           <td>
+            <input type="checkbox" id="rrr">
+            <label for="rrr">赤い目</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
             <input type="checkbox" id="buffCheckbox">
             <label for="buffCheckbox">バフ</label>
           </td>
         </tr>
         <tr>
-          <td>テキスト２</td>
-    <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-          <td>テキスト３</td>
-    <td><input type="checkbox"></td>
+          <td>
+            <input type="checkbox" id="buffCheckbox">
+            <label for="buffCheckbox">バフ</label>
+          </td>
         </tr>
       </table>
     </td>
@@ -48,10 +52,10 @@
   <script>
     function calculation() {
       var ini = document.getElementById("inputField").value;
-      var buffCheckbox = document.getElementById("buffCheckbox");
+      var Checkbox_rrr = document.getElementById("rrr");
       var resultText = document.getElementById("result");
       
-      if (buffCheckbox.checked) {
+      if (Checkbox_rrr.checked) {
         resultText.textContent = parseInt(ini) * 100;
       } else {
         resultText.textContent = 0;
