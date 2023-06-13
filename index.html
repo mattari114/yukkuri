@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゆく育</title>
-    <link rel="stylesheet" href="main.css">
+  <title>チェックボックスのサンプル</title>
+  <style>
+    .output {
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body class="light-theme">
-    <h1>kategory</h1>
-    <p id="msg">unnko</p>
-    <label><input type=”checkbox” name=”A” value=”1”>選択肢1</label>
-    <ul>
-        <li class="list">banana unnko</li>
-        <li class="list">katai unnko</li>
-        <li>lefting dragon as下痢</li>
-    </ul>
-    <div>
-        <button class="btn">Dark</button>
-    </div>
-    <script src="app.js"></script>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
+<body>
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox">チェックボックス</label>
+  <br>
+  <span class="output">テキスト表示</span>
+
+  <script>
+    // チェックボックスの要素を取得
+    var checkbox = document.getElementById("checkbox");
+
+    // テキスト表示の要素を取得
+    var output = document.querySelector(".output");
+
+    // チェックボックスが変更された時のイベントリスナーを設定
+    checkbox.addEventListener("change", function() {
+      // チェックボックスの状態に応じてテキストを変更
+      if (checkbox.checked) {
+        output.textContent = "チェックボックスが選択されました";
+      } else {
+        output.textContent = "チェックボックスが選択されていません";
+      }
+    });
+  </script>
 </body>
 </html>
