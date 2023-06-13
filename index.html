@@ -13,12 +13,14 @@
   <p id="result">計算結果</p>
   
   <label for="buffCheckbox">バフ</label>
-  <input type="checkbox" id="buffCheckbox" onchange="calculation()">
+  <input type="checkbox" id="buffCheckbox">
   
   <br><br>
   
   <label for="inputField">数値入力：</label>
-  <input type="number" id="inputField" value="100" onchange="calculation()">
+  <input type="number" id="inputField" value="100">
+  
+  <button onclick="calculation()">計算する</button>
   
   <script>
     function calculation() {
