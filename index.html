@@ -46,8 +46,8 @@
   
   <br>
   
-            <label for="inputField">初期火力</label>
-            <input type="number" id="inputField" value="100">
+            <label for="ini">初期火力</label>
+            <input type="number" id="ini" value="100">
   
   <button onclick="calculation()">計算する</button>
 
@@ -162,7 +162,7 @@ var finish2;  // 火力同士の割り算算出
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     function calculation() {
-      var ini = document.getElementById("inputField").value;
+      var ini = document.getElementById("ini").value;
       var Checkbox_rrr = document.getElementById("rrr");//赤い目チェックボックス取得
       var resultText = document.getElementById("result");//計算結果
       
@@ -172,8 +172,9 @@ var finish2;  // 火力同士の割り算算出
         rrr2 = 0;
       }
 
-      resultText.textContent = a;
+      resultText.textContent = rrr2.toString();
     }
   </script>
+  
 </body>
 </html>
