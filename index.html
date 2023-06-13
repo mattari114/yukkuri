@@ -526,7 +526,7 @@
   <!-- ~~~~~~~~~~~~~ボタンとか入力とか~~~~~~~~~~~~~~ -->
   <tr>
   <table>  
-      <td>
+    <td>
       <table>
         <tr>
           <td>
@@ -534,46 +534,71 @@
             <input type="number" id="lll" value="0">
           </td>
         </tr>
+      </table>
+    </td>     
+    <td>
+      <table>
         <tr>
           <td>
-            <p>元ステ</p>
+            <label>元ステ</label><br>
             <input type="number" id="mmm" value="0">
           </td>
         </tr>
+      </table>
+    </td>
+    <td>
+      <table>        
         <tr>
           <td>
-            <p>クリ率</p>
+            <label>クリ率</label><br>
             <input type="number" id="nnn" value="0">
           </td>
         </tr>
+      </table>
+    </td>        
+    <td>
+      <table>        
         <tr>
           <td>
-            <p>クリ倍率</p>
+            <label>クリ倍率</label><br>
             <input type="number" id="ooo" value="0">
           </td>
         </tr>
+      </table>
+    </td>        
+    <td>
+      <table>
         <tr>
           <td>
-            <p>独立</p>
+            <label>独立</label><br>
             <input type="number" id="ppp" value="1">
           </td>
         </tr>
-        
-    
       </table>
     </td>
-
+    <td>
+      <table>
+        <tr>
+          <td>
+            <br>
+            <button onclick="calculation()">広告を見ずに算出</button>
+          </td>
+        </tr>
+      </table>
+    </td>
+    
   </tr>
   </table>
 
-    <button onclick="calculation()">広告を見ずに算出</button>
 
-  
-            <p>初期火力</p>
+            <label>初期火力</label><br>
             <input type="number" id="ini" value="100">
-  
-
-
+            <label>固定値</label><br>
+            <input type="number" id="fix" value="0">  
+            <label>atk才能</label><br>
+            <input type="number" id="talent" value="30">
+            <label>レベル</label><br>
+            <input type="number" id="level" value="280">
 
   <!-- ~~~~~~~~~~~~~こっからシステムjs~~~~~~~~~~~~~~ -->
 
