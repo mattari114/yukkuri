@@ -487,40 +487,79 @@
             <label for="zz">ビルド強化4</label>
           </td>
         </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="">
-            <label for=""></label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="">
-            <label for=""></label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="">
-            <label for=""></label>
-          </td>
-        </tr>
-
-
-        
-        
+                
       </table>
     </td>
+
+
+<!-- ~~~~~~~~~~~~~6列目とっつにゅー~~~~~~~~~~~~~~ -->
     
+    <td>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+    
+      </table>
+    </td>
+
+  
   </tr>
   </table>
 
   
-  <!-- ~~~~~~~~~~~~~ボタンとか入力~~~~~~~~~~~~~~ -->
-            <label for="ini">初期火力</label>
+  <!-- ~~~~~~~~~~~~~ボタンとか入力とか~~~~~~~~~~~~~~ -->
+  <tr>
+  <table>  
+      <td>
+      <table>
+        <tr>
+          <td>
+            <p>通常バフ</p>
+            <input type="number" id="lll" value="0">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>元ステ</p>
+            <input type="number" id="mmm" value="0">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+    
+      </table>
+    </td>
+
+  </tr>
+  </table>
+
+    <button onclick="calculation()">広告を見ずに算出</button>
+
+  
+            <p>初期火力</p>
             <input type="number" id="ini" value="100">
   
-  <button onclick="calculation()">広告を見ずに算出</button>
+
 
 
   <!-- ~~~~~~~~~~~~~こっからシステムjs~~~~~~~~~~~~~~ -->
@@ -634,21 +673,751 @@ var hidari;  // 割り算の左
 var migi;  // 割り算の右
 var finish2;  // 火力同士の割り算算出
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~処理~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     function calculation() {
       var ini = document.getElementById("ini").value;
-      var Checkbox_rrr = document.getElementById("rrr");//赤い目チェックボックス取得
+      var checkbox_rrr = document.getElementById("rrr");//赤い目チェックボックス取得
       var resultText = document.getElementById("result");//計算結果
-      
-      if (Checkbox_rrr.checked) {  //取得されてる赤い目チェックボックスの真偽チェック
-        rrr2 = 100;
-      } else {
-        rrr2 = 0;
-      }
 
-      resultText.textContent = rrr2.toString();
+//チェックボックス真偽審議ターイム～～～～～～～～
+            if (checkbox_a.checked)
+            {
+                a = 50;
+            }
+            else
+            {
+                a = 0;
+            }
+            if (checkbox_b.checked)
+            {
+                b = 60;
+            }
+            else
+            {
+                b = 0;
+            }
+            if (checkbox_c.checked)
+            {
+                c = 70;
+            }
+            else
+            {
+                c = 0;
+            }
+
+            if (checkbox_d.checked)
+            {
+                d = 80;
+            }
+            else
+            {
+                d = 0;
+            }
+            if (checkbox_E.checked)
+            {
+                E = 85;
+            }
+            else
+            {
+                E = 0;
+            }
+
+            //fは飛ばす 
+            if (checkbox_g.checked)
+            {
+                g = 50;
+            }
+            else
+            {
+                g = 0;
+            }
+            if (checkbox_h.checked)
+            {
+                h3 = 1.5;
+                h4 = 50;
+                h5 = 1.3;
+            }
+            else
+            {
+                h3 = 0;
+                h4 = 0;
+                h5 = 1;
+            }
+            if (checkbox_i.checked)
+            {
+                i = 80;
+            }
+            else
+            {
+                i = 0;
+            }
+            if (checkbox_j.checked)
+            {
+                j2 = 50;
+            }
+            else
+            {
+                j2 = 0;
+            }
+            if (checkbox_k.checked)
+            {
+                k = 15;
+                k3 = 0;
+                k4 = 0;
+            }
+            else
+            {
+                k = 0;
+                k3 = 0;
+                k4 = 0;
+            }
+
+            //lはなし 
+            if (checkbox_m.checked)
+            {
+                m = 100;
+            }
+            else
+            {
+                m = 0;
+            }
+            if (checkbox_n.checked)
+            {
+                n3 = 2;
+                n4 = 40;
+            }
+            else
+            {
+                n3 = 0;
+                n4 = 0;
+            }
+            if (checkbox_o.checked)
+            {
+                o3 = 3;
+                o4 = 60;
+            }
+            else
+            {
+                o3 = 0;
+                o4 = 0;
+            }
+            if (checkbox_p.checked)
+            {
+                p3 = 4;
+                p4 = 80;
+            }
+            else
+            {
+                p3 = 0;
+                p4 = 0;
+            }
+            if (checkbox_q.checked)
+            {
+                q3 = 5;
+                q4 = 100;
+            }
+            else
+            {
+                q3 = 0;
+                q4 = 0;
+            }
+            if checkbox_r.checked)
+            {
+                r = 35;
+            }
+            else
+            {
+                r = 0;
+            }
+            if (checkbox_s.checked)
+            {
+                s = 20;
+            }
+            else
+            {
+                s = 0;
+            }
+            if (checkbox_t.checked)
+            {
+                t2 = 30;
+                t3 = 3;
+                t4 = 100;
+            }
+            else
+            {
+                t2 = 0;
+                t3 = 0;
+                t4 = 0;
+            }
+
+            //uは減算 
+            if (checkbox_u.checked)
+            {
+                u = 100;
+            }
+            else
+            {
+                u = 0;
+            }
+            if (checkbox_v.checked)
+            {
+                v = 15;
+            }
+            else
+            {
+                v = 0;
+            }
+            if (checkbox_w.checked)
+            {
+                w = 50;
+            }
+            else
+            {
+                w = 0;
+            }
+            //xは減算 
+            if (checkbox_x.checked)
+            {
+                x = 90;
+            }
+            else
+            {
+                x = 0;
+            }
+            if (checkbox_y.checked)
+            {
+                y3 = 2.5;
+                y4 = 50;
+            }
+            else
+            {
+                y3 = 0;
+                y4 = 0;
+            }
+            if (checkbox_z.checked)
+            {
+                z3 = 3.5;
+                z4 = 80;
+            }
+            else
+            {
+                z3 = 0;
+                z4 = 0;
+            }
+            if (checkbox_aa.checked)
+            {
+                aa3 = 4.5;
+                aa4 = 110;
+            }
+            else
+            {
+                aa3 = 0;
+                aa4 = 0;
+            }
+            if (checkbox_bb.checked)
+            {
+                bb3 = 5.5;
+                bb4 = 140;
+            }
+            else
+            {
+                bb3 = 0;
+                bb4 = 0;
+            }
+            if (checkbox_cc.checked)
+            {
+                cc3 = 6.5;
+                cc4 = 170;
+            }
+            else
+            {
+                cc3 = 0;
+                cc4 = 0;
+            }
+            //飛んでgg 
+            if (checkbox_gg.checked)
+            {
+                gg2 = 5;
+                gg3 = 4;
+                gg4 = 60;
+                gg5 = 1.15;
+            }
+            else
+            {
+                gg2 = 0;
+                gg3 = 0;
+                gg4 = 0;
+                gg5 = 1;
+            }
+            if (checkbox_hh.checked)
+            {
+                hh2 = 10;
+                hh5 = 1.4;
+            }
+            else
+            {
+                hh2 = 0;
+                hh5 = 1;
+            }
+            if (checkbox_ii.checked)
+            {
+                ii3 = 4;
+                ii4 = 60;
+                ii5 = 1.2;
+            }
+            else
+            {
+                ii3 = 0;
+                ii4 = 0;
+                ii5 = 1;
+            }
+            if (checkbox_jj.checked)
+            {
+                jj = 40;
+                jj3 = 4;
+                jj4 = 40;
+            }
+            else
+            {
+                jj = 0;
+                jj3 = 0;
+                jj4 = 0;
+            }
+            if (checkbox_kk.checked)
+            {
+                kk5 = 2;
+            }
+            else
+            {
+                kk5 = 1;
+            }
+            if (checkbox_ll.checked)
+            {
+                ll2 = 10;
+                ll3 = 4;
+                ll4 = 60;
+                ll5 = 1.2;
+            }
+            else
+            {
+                ll2 = 0;
+                ll3 = 0;
+                ll4 = 0;
+                ll5 = 1;
+            }
+
+            //mm23は減算 
+            if (checkbox_mm.checked)
+            {
+                mm2 = 10;
+                mm3 = 1;
+            }
+            else
+            {
+                mm2 = 0;
+                mm3 = 0;
+            }
+            if (checkbox_nn.checked)
+            {
+                nn2 = 40;
+            }
+            else
+            {
+                nn2 = 0;
+            }
+            if (checkbox_oo.checked)
+            {
+                oo2 = 25;
+            }
+            else
+            {
+                oo2 = 0;
+            }
+            if (checkbox_pp.checked)
+            {
+                pp5 = 1.6;
+            }
+            else
+            {
+                pp5 = 1;
+            }
+            if (checkbox_qq.checked)
+            {
+                qq2 = 300;
+                qq3 = 20;
+                qq4 = 200;
+            }
+            else
+            {
+                qq2 = 0;
+                qq3 = 0;
+                qq4 = 0;
+            }
+            if (checkbox_rr.checked)
+            {
+                rr = 80;
+            }
+            else
+            {
+                rr = 0;
+            }
+            if (checkbox_ss.checked)
+            {
+                ss = 100;
+                ss3 = 5;
+                ss4 = 80;
+            }
+            else
+            {
+                ss = 0;
+                ss3 = 0;
+                ss4 = 0;
+            }
+            if (checkbox_tt.checked)
+            {
+                tt = 120;
+                tt3 = 6;
+                tt4 = 100;
+            }
+            else
+            {
+                tt = 0;
+                tt3 = 0;
+                tt4 = 0;
+            }
+            if (checkbox_uu.checked)
+            {
+                uu = 150;
+            }
+            else
+            {
+                uu = 0;
+            }
+            if (checkbox_vv.checked)
+            {
+                vv = 175;
+            }
+            else
+            {
+                vv = 0;
+            }
+            if (checkbox_ww.checked)
+            {
+                ww = 117;
+                ww3 = 6.7;
+                ww4 = 100;
+            }
+            else
+            {
+                ww = 0;
+                ww3 = 0;
+                ww4 = 0;
+            }
+            if (checkbox_xx.checked)
+            {
+                xx = 140;
+                xx3 = 8;
+                xx4 = 120;
+            }
+            else
+            {
+                xx = 0;
+                xx3 = 0;
+                xx4 = 0;
+            }
+            if (checkbox_yy.checked)
+            {
+                yy = 125;
+                yy3 = 8.3;
+                yy4 = 100;
+            }
+            else
+            {
+                yy = 0;
+                yy3 = 0;
+                yy4 = 0;
+            }
+            if (checkbox_zz.checked)
+            {
+                zz = 150;
+                zz3 = 10;
+                zz4 = 120;
+            }
+            else
+            {
+                zz = 0;
+                zz3 = 0;
+                zz4 = 0;
+            }
+
+            //飛んでddに回帰
+            if (checkbox_dd.checked)
+            {
+                dd2 = 20;
+            }
+            else
+            {
+                dd2 = 0;
+            }
+            if (checkbox_ee.checked)
+            {
+                ee = 75;
+            }
+            else
+            {
+                ee = 0;
+            }
+            if (checkbox_ff.checked)
+            {
+                ff = 110;
+            }
+            else
+            {
+                ff = 0;
+            }
+
+            //aaaに回帰
+            if (checkbox_aaa.checked)
+            {
+                aaa = 5;
+            }
+            else
+            {
+                aaa = 0;
+            }
+            if (checkbox_bbb.checked)
+            {
+                bbb = 35;
+            }
+            else
+            {
+                bbb = 0;
+            }
+            if (checkbox_ccc.checked)
+            {
+                ccc3 = 0.5;
+            }
+            else
+            {
+                ccc3 = 0;
+            }
+            if (checkbox_ddd.checked)
+            {
+                ddd5 = 1.428;
+            }
+            else
+            {
+                ddd5 = 1;
+            }
+            if (checkbox_fff.checked)
+            {
+                fff5 = 1.25;
+            }
+            else
+            {
+                fff5 = 1;
+            }
+            if (checkbox_ggg.checked)
+            {
+                ggg5 = 1.428;
+            }
+            else
+            {
+                ggg5 = 1;
+            }
+            if (checkbox_hhh.checked)
+            {
+                hhh5 = 1.052;
+            }
+            else
+            {
+                hhh5 = 1;
+            }
+            if (checkbox_iii.checked)
+            {
+                iii5 = 1.111;
+            }
+            else
+            {
+                iii5 = 1;
+            }
+            if (checkbox_jjj.checked)
+            {
+                jjj5 = 1.176;
+            }
+            else
+            {
+                jjj5 = 1;
+            }
+            if (checkbox_kkk.checked)
+            {
+                kkk5 = 1.25;
+            }
+            else
+            {
+                kkk5 = 1;
+            }
+            if (checkbox_qqq.checked)
+            {
+                qqq = 40;
+            }
+            else
+            {
+                qqq = 0;
+            }
+            if (checkbox_rrr.checked)
+            {
+                rrr2 = 128;
+            }
+            else
+            {
+                rrr2 = 0;
+            }
+            if (checkbox_sss.checked)
+            {
+                sss2 = 1 + (6 / (level * (16 + talent) / 10) * 100);
+            }
+            else
+            {
+                sss2 = 0;
+            }
+            if (checkbox_ttt.checked)
+            {
+                ttt2 = 2 + (12 / (level * (16 + talent) / 10) * 100);
+            }
+            else
+            {
+                ttt2 = 0;
+            }
+            if (checkbox_uuu.checked)
+            {
+                uuu2 = 3 + (18 / (level * (16 + talent) / 10) * 100);
+            }
+            else
+            {
+                uuu2 = 0;
+            }
+            if (checkbox_vvv.checked)
+            {
+                vvv2 = 4 + (24 / (level * (16 + talent) / 10) * 100);
+            }
+            else
+            {
+                vvv2 = 0;
+            }
+
+            if (checkbox_xxx.checked)
+            {
+                xxx = 150;
+                xxx3 = 7.5;
+                xxx4 = 120;
+            }
+            else
+            {
+                xxx = 0;
+                xxx3 = 0;
+                xxx4 = 0;
+            }
+            if (checkbox_yyy.checked)
+            {
+                yyy = 180;
+                yyy3 = 9;
+                yyy4 = 150;
+            }
+            else
+            {
+                yyy = 0;
+                yyy3 = 0;
+                yyy4 = 0;
+            }
+            if (checkbox_zzz.checked)
+            {
+                zzz = 120;
+            }
+            else
+            {
+                zzz = 0;
+            }
+            if (checkbox_aaaa.checked)
+            {
+                aaaa = 176;
+                aaaa3 = 10;
+                aaaa4 = 150;
+            }
+            else
+            {
+                aaaa = 0;
+                aaaa3 = 0;
+                aaaa4 = 0;
+            }
+            if (checkbox_bbbb.checked)
+            {
+                bbbb = 210;
+                bbbb3 = 12;
+                bbbb4 = 180;
+            }
+            else
+            {
+                bbbb = 0;
+                bbbb3 = 0;
+                bbbb4 = 0;
+            }
+            if (checkbox_cccc.checked)
+            {
+                cccc = 160;
+                cccc3 = 8;
+                cccc4 = 120;
+            }
+            else
+            {
+                cccc = 0;
+                cccc3 = 0;
+                cccc4 = 0;
+            }
+            if (checkbox_dddd.checked)
+            {
+                dddd5 = 1.6;
+            }
+            else
+            {
+                dddd5 = 1;
+            }
+            if (checkbox_eeee.checked)
+            {
+                eeee = 30;
+            }
+            else
+            {
+                eeee = 0;
+            }
+            if (checkbox_ffff.checked)
+            {
+                ffff = 150;
+                ffff3 = 40;
+                ffff4 = 120;
+            }
+            else
+            {
+                ffff = 0;
+                ffff3 = 0;
+                ffff4 = 0;
+            }
+            if (checkbox_gggg.checked)
+            {
+                gggg = 100;
+            }
+            else
+            {
+                gggg = 0;
+            }
+
+
+
+      
+      resultText.textContent = finish.toString();
     }
+    
   </script>
   
 </body>
