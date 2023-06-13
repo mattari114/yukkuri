@@ -10,10 +10,12 @@
 </head>
 <body>
   <h1>ゆく育計算機</h1>
+
   <p id="result">計算結果</p>
   
-  <label for="buffCheckbox">バフ</label>
   <input type="checkbox" id="buffCheckbox">
+  <label for="buffCheckbox">バフ</label>
+
   
   <br><br>
   
@@ -24,12 +26,12 @@
   
   <script>
     function calculation() {
-      var input = document.getElementById("inputField").value;
+      var ini = document.getElementById("inputField").value;
       var buffCheckbox = document.getElementById("buffCheckbox");
       var resultText = document.getElementById("result");
       
       if (buffCheckbox.checked) {
-        resultText.textContent = parseInt(input) * 100;
+        resultText.textContent = parseInt(ini) * 100;
       } else {
         resultText.textContent = 0;
       }
