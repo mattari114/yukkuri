@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>チェックボックスのサンプル</title>
+  <title>ゆく育計算機</title>
   <style>
-    .output {
+    #result {
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <input type="checkbox" id="checkbox">
-  <label for="checkbox">チェックボックス</label>
-  <br>
-  <span class="output">テキスト表示</span>
-
+  <h1>ゆく育計算機</h1>
+  <p id="result"></p>
+  
+  <label for="buffCheckbox">バフ</label>
+  <input type="checkbox" id="buffCheckbox">
+  
+  <br><br>
+  
+  <label for="inputField">数値入力：</label>
+  <input type="number" id="inputField" onchange="calculation()">
+  
   <script>
-    // チェックボックスの要素を取得
-    var checkbox = document.getElementById("checkbox");
-
-    // テキスト表示の要素を取得
-    var output = document.querySelector(".output");
-
-    // チェックボックスが変更された時のイベントリスナーを設定
-    checkbox.addEventListener("change", function() {
-      // チェックボックスの状態に応じてテキストを変更
-      if (checkbox.checked) {
-        output.textContent = "チェックボックスが選択されました";
+    function calculation() {
+      var input = document.getElementById("inputField").value;
+      var buffCheckbox = document.getElementById("buffCheckbox");
+      var resultText = document.getElementById("result");
+      
+      if (buffCheckbox.checked) {
+        resultText.textContent = parseInt(input) * 100;
       } else {
-        output.textContent = "チェックボックスが選択されていません";
+        resultText.textContent = 0;
       }
-    });
+    }
   </script>
 </body>
 </html>
