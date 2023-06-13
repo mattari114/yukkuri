@@ -52,14 +52,16 @@
   <script>
     function calculation() {
       var ini = document.getElementById("inputField").value;
-      var Checkbox_rrr = document.getElementById("rrr");
-      var resultText = document.getElementById("result");
+      var Checkbox_rrr = document.getElementById("rrr");//赤い目チェックボックス取得
+      var resultText = document.getElementById("result");//計算結果
       
-      if (Checkbox_rrr.checked) {
-        resultText.textContent = parseInt(ini) * 100;
+      if (Checkbox_rrr.checked) {  //取得されてる赤い目チェックボックスの真偽チェック
+        rrr2 = 100;
       } else {
-        resultText.textContent = 0;
+        rrr2 = 0;
       }
+
+      resultText.textContent = rrr;
     }
   </script>
 </body>
