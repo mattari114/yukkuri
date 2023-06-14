@@ -706,11 +706,11 @@
             
            <label>保存済火力の引用と割り算</label><br>
             <input type="number" id="hidari"><label> ÷ </label><input type="number" id="migi"><label> ＝ </label><input type="number" id="comparate_finish"> <br>
-            <button onclicl="slot1_hidari()">保存１</button><h3>           </h3><button onclicl="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
+            <button onclicl="slot1_hidari()">保存１</button><label>           </label><button onclicl="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
             <button onclicl="slot2_hidari()">　山　</button><label>、           、</label><button onclicl="slot2_hidari()">　山　</button> <br>
             <button onclicl="slot3_hidari()">　川　</button><label>、           、</label><button onclicl="slot3_hidari()">　川　</button> <br>       
 
-
+            <button onclicl="comparate_calculate()">割る</button>
 
 
 
@@ -2087,8 +2087,43 @@ if (!checkbox_c5.checked) {
     }
 
     function comparate1(){
-      document.getElementById("inputField").value = finish.toString();
+      document.getElementById("slot1").value = finish.toString();
     }
+    function comparate2(){
+      document.getElementById("slot2").value = finish.toString();
+    }
+    function comparate3(){
+      document.getElementById("slot3").value = finish.toString();
+    }    
+    function slot1_hidari(){
+      document.getElementById("hidari").value = document.getElementById("slot1").value
+    }
+    function slot2_hidari(){
+      document.getElementById("hidari").value = document.getElementById("slot2").value
+    }
+    function slot3_hidari(){
+      document.getElementById("hidari").value = document.getElementById("slot3").value
+    }
+    function slot1_migi(){
+      document.getElementById("migi").value = document.getElementById("slot1").value
+    }
+    function slot2_migi(){
+      document.getElementById("migi").value = document.getElementById("slot2").value
+    }
+    function slot3_migi(){
+      document.getElementById("migi").value = document.getElementById("slot3").value
+    }
+
+    function comparate_clear(){
+      document.getElementById("slot1").value="";
+      document.getElementById("slot2").value="";
+      document.getElementById("slot3").value="";
+    }
+    
+    function comparate_calculate(){
+      document.getElementById("comparate_finish").value = (parseFloat(document.getElementById("hidari").value) / parseFloat(document.getElementById("migi").value))toString();
+    }
+
     
   </script>
 
