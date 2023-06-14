@@ -13,6 +13,10 @@
 
   <p id="result">*のついてるの選択するなら才能値とレベルの入力を</p>
 
+  <label>　　　　　　スキル　　　　　　　　　　ゆくせ　　　　　　必殺バフ　　　　　　　　レジェンダリ　　　　ファンタズマ　　　　　エンシェント　　メモと火力記録</label>
+  
+<!-- ~~~~~~~~~~~~~~~~~~~~~チェックボックス作成~~~~~~~~~~~~~~~~~~ -->
+  
   <table>
   <tr>
 
@@ -143,25 +147,25 @@
         <tr>
          <td>
            <input type="checkbox" id="sss">
-           <label for="sss">攻撃up1</label>
+           <label for="sss">攻撃up1*</label>
          </td>
         </tr>
         <tr>
           <td>
             <input type="checkbox" id="ttt">
-            <label for="ttt">攻撃up2</label>
+            <label for="ttt">攻撃up2*</label>
          </td>
         </tr>
         <tr>
           <td>
             <input type="checkbox" id="uuu">
-            <label for="uuu">攻撃up3</label>
+            <label for="uuu">攻撃up3*</label>
           </td>
         </tr>        
         <tr>
           <td>
             <input type="checkbox" id="vvv">
-            <label for="vvv">攻撃up4</label>
+            <label for="vvv">攻撃up4*</label>
           </td>
         </tr>
         <tr>
@@ -362,19 +366,19 @@
         <tr>
           <td>
             <input type="checkbox" id="www">
-            <label for="www">紋所</label>
+            <label for="www">紋所*</label>
           </td>
         </tr>
         <tr>
           <td>
-            <input type="checkbox" id="asas">
-            <label for="asas"></label>
+            <input type="checkbox" id="">
+            <label for=""></label>
           </td>
         </tr>
         <tr>
           <td>
-            <input type="checkbox" id="asas">
-            <label for="asas"></label>
+            <input type="checkbox" id="">
+            <label for=""></label>
           </td>
         </tr>
         
@@ -518,6 +522,85 @@
       </table>
     </td>
 
+<!-- ~~~~~~~~~~~~~7列目とっつにゅー~~~~~~~~~~~~~~ -->
+    
+    <td>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+    
+      </table>
+    </td>    
+
+<!-- ~~~~~~~~~~~~~8列目とっつにゅー~~~~~~~~~~~~~~ -->
+    
+    <td>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+    
+      </table>
+    </td>
+
+<!-- ~~~~~~~~~~~~~9列目とっつにゅー~~~~~~~~~~~~~~ -->
+    
+    <td>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="">
+            <label for=""></label>
+          </td>
+        </tr>
+    
+      </table>
+    </td>
+
+    
   
   </tr>
   </table>
@@ -642,19 +725,20 @@ ver:1.0β：多分リリース
 ・紋所は攻撃力+2000(最大)に設定してます。
 </textarea>
 
+  <br>
             <label>よくわかってる人だけ使ってください</label><br>
             <input type="checkbox" id="ddd">
-            <label for="ddd">ギガの攻速</label>            
+            <label for="ddd">ギガの攻速</label>       <br>     
             <input type="checkbox" id="fff">
-            <label for="fff">天照の攻速</label>      
+            <label for="fff">天照の攻速</label>      <br>
             <input type="checkbox" id="ggg">
-            <label for="ggg">真天照の攻速</label>    
+            <label for="ggg">真天照の攻速</label>    <br>
             <input type="checkbox" id="hhh">
-            <label for="hhh">攻速1</label>    
+            <label for="hhh">攻速1</label>    <br>
             <input type="checkbox" id="iii">
-            <label for="iii">攻速2</label>      
+            <label for="iii">攻速2</label>      <br>
             <input type="checkbox" id="jjj">
-            <label for="jjj">攻速3</label>
+            <label for="jjj">攻速3</label>    <br>
             <input type="checkbox" id="kkk">
             <label for="kkk">攻速4</label>      
   
@@ -1645,7 +1729,7 @@ var checkbox_zzzz = document.getElementById("zzzz");
             crid = (100 + h4 + k4 + n4 + o4 + p4 + q4 + t4 + y4 + z4 + aa4 + bb4 + cc4 + gg4 + ii4 + jj4 + ll4 + qq4 + ss4 + tt4 + ww4 + xx4 + yy4 + zz4 + ooo4 + xxx4 + yyy4 + aaaa4 + bbbb4 + cccc4 + ffff4) / 100;
             other = gg5 * hh5 * ii5 * kk5 * ll5 * pp5 * h5 * ddd5 * fff5 * ggg5 * hhh5 * iii5 * jjj5 * kkk5 * ppp5 * dddd5;
       
-      console.log(ini,j2,t2,dd2,gg2,hh2,ll2,mm2,nn2,oo2,qq2,mmm2,rrr2,sss2,ttt2,uuu2,vvv2);
+    console.log(ini,j2,t2,dd2,gg2,hh2,ll2,mm2,nn2,oo2,qq2,mmm2,rrr2,sss2,ttt2,uuu2,vvv2);
     console.log(exatk);
     console.log(atk);
     console.log(cri);
