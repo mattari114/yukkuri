@@ -13,7 +13,7 @@
   
   <style>
   input {
-  width: 40px;
+  width: 70px;
 }
   </style>
   
@@ -2078,7 +2078,7 @@ if (!checkbox_c5.checked) {
     console.log("通常"+(atk*100-100));
     console.log("元ステ"+(exatk*100/ini-ini));
     console.log("クリ"+cri);
-    console.log("クリ倍率"+crid);
+    console.log("クリ倍率"+(crid)*100-100);
     console.log("独立"+other);      
             //finish = exatk * atk * other * 0.01 * (cri * crid + 100 - cri);
             finish = (exatk * atk * cri * crid * other + exatk * atk * (100 - cri) * other) / 100 + (fix * other * cri * crid + fix * other * (100 - cri)) / 100;
