@@ -707,8 +707,8 @@ inputField {
            <label>保存済火力の引用と割り算</label><br>
             <input type="number" id="hidari"><label> ÷ </label><input type="number" id="migi"><label> ＝ </label><input type="number" id="comparate_finish"> <br>
             <button onclick="slot1_hidari()">保存１</button>  <label>________</label>  <button onclick="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
-            <button onclick="slot2_hidari()">　山　</button>  <label></label>  <button onclick="slot2_migi()">　山　</button> <br>
-            <button onclick="slot3_hidari()">　川　</button>  <label></label>  <button onclick="slot3_migi()">　川　</button> <br>       
+            <button onclick="slot2_hidari()">　山　</button>  <label>________</label>  <button onclick="slot2_migi()">　山　</button> <br>
+            <button onclick="slot3_hidari()">　川　</button>  <label>________</label>  <button onclick="slot3_migi()">　川　</button> <br>       
 
             <button onclick="comparate_calculate()">割る</button>
 
@@ -782,7 +782,7 @@ inputField {
     </td>
 
 
-    <button onclick="calculation()">広告を見ずに算出</button>
+    <button onclick="calculation()">広告を見ずに算出</button><button onclick=checkbox_clear()">ばよえ-ん</button>
   </tr>
   </table>
 
@@ -861,6 +861,7 @@ ver:1.0β：多分リリース
 ・チェックボックスにないバフを反映させる場合はそのバフの種類にあった項目に数値を追加してください。
 ・バーサーカーや妖怪退治などを追加していませんが同じ種族場合かつ必ず習得する場合かつ独立バフの場合は算出される平均火力を比較したときの比率に差がないので不要です。
 ・紋所は攻撃力+6000に設定してます。
+・天使の祈りは孤立1.3と見なしてます。
 ・【募集】これ編集したい人twiきてください
 ・デベロッパーツールのコンソールに各バフの合計値吐いてるので項目単体の数値の確認やデバッグができます
 </textarea>
@@ -2127,6 +2128,15 @@ if (!checkbox_c5.checked) {
       document.getElementById("comparate_finish").value = (parseFloat(document.getElementById("hidari").value) / parseFloat(document.getElementById("migi").value)).toString();
     }
 
+    function checkbox_clear(){
+      // 全てのチェックボックス要素を取得
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// 全てのチェックボックスのチェックを外す
+for (var i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].checked = false;
+}
+    }
     
   </script>
 
