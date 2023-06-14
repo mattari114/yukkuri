@@ -588,7 +588,6 @@
           </td>
         </tr>
 
-          <br><br><br><br><br><br><br>
         
       </table>
     </td>
@@ -610,7 +609,6 @@
           </td>
         </tr>
 
-        <br><br><br><br><br><br><br><br><br><br>
         
       </table>
     </td>    
@@ -653,7 +651,6 @@
 
         
 
-<br><br><br><br><br><br><br><br><br><br>
         
       </table>
     </td>
@@ -700,9 +697,9 @@
             <button onclick="comparate_clear()">初回無料ガチャで上の消す</button><br> 
            <label>保存済火力の引用と割り算</label><br>
             <input type="number" id="hidari"><label> ÷ </label><input type="number" id="migi"><label> ＝ </label><input type="number" id="comparate_finish"> <br>
-            <button onclicl="slot1_hidari()">保存１</button><label>.           .</label><button onclicl="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
-            <button onclicl="slot2_hidari()">　山　</button><label>.           .</label><button onclicl="slot2_hidari()">　山　</button> <br>
-            <button onclicl="slot3_hidari()">　川　</button><label>.           .</label><button onclicl="slot3_hidari()">　川　</button> <br>       
+            <button onclicl="slot1_hidari()">保存１</button><label>、           、</label><button onclicl="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
+            <button onclicl="slot2_hidari()">　山　</button><label>、           、</label><button onclicl="slot2_hidari()">　山　</button> <br>
+            <button onclicl="slot3_hidari()">　川　</button><label>、           、</label><button onclicl="slot3_hidari()">　川　</button> <br>       
 
 
 
@@ -801,10 +798,12 @@
           <td>
         <tr>
           <td>
+            <label>武器攻撃力</label><br>
+            <input type="number" id="weaponATK" value="100"><br>               
             <label>生存数</label><br>
-            <input type="number" id="ikiteru" value="100"><br>            
+            <input type="number" id="ikiteru" value="4"><br>            
             <label>戦闘不能数</label><br>
-            <input type="number" id="sinderu" value="100"><br>
+            <input type="number" id="sinderu" value="4"><br>
           </td>
         </tr>        
       </table>
@@ -842,22 +841,21 @@ ver:1.0β：多分リリース
 </textarea>
   
 <textarea rows="10" cols="50">  Tips
-・バフは50音順です(多分)。
+・*がついてる項目、例えば攻撃upやなら攻撃才能値とレベルを入力する必要があります、群強なら生存数、生と死なら戦闘不能数といったように対応する
+入力フィールドに任意の値を入力してください。それ以外の効力が変動するバフについては最大の値で設定されています（反骨）
+・バフはなるべく50音順にしてます。
 ・赤い目は本来最大+128.6%の元ステバフですが微妙に妥協している人のことも考慮し128.0%と設定しています。
 ・アンドロイド刀の数値はある程度の検証をもとに0.5%と推定し設定しています。
-・必殺クリ5のクリ率は6.5%と推定し設定しています。
-・支援、力陣を強化するゆくせがありますが強化前の数値のみ設けているので強化後を追加したい場合はお手数ですがバフの種類を理解したうえで入力をお願いします。
-・ビルドはビルド強化後の数値のみを設けているので強化前を追加したい場合はよろおなすー
-・群れの力は四体生存時(通常バフ+75％)の数値のみを設けているのでこれ以外を追加しry
-・翼バトンは四回成功時の数値のみを設けてry
-・チェックボックスにないバフを「任意の分だけ加算」機能で反映させる場合はそのバフの種類にあった項目に追加してください。
-・バーサーカーや妖怪退治などを追加していませんが同じ種族場合かつ必ず習得する場合かつ独立バフの場合は算出される平均火力を比較したときの割合に変化はないので安心してください。
-・atk才能値とレベルの入力は「攻撃up」系もしくは「紋所」採用時のみお願いします。
-・紋所は攻撃力+2000(最大)に設定してます。
+・必殺クリ5のクリ率は6.5%と推定し設定しています。生と死は1.5n
+・チェックボックスにないバフを反映させる場合はそのバフの種類にあった項目に数値を追加してください。
+・バーサーカーや妖怪退治などを追加していませんが同じ種族場合かつ必ず習得する場合かつ独立バフの場合は算出される平均火力を比較したときの比率に差がないので不要です。
+・紋所は攻撃力+6000に設定してます。
+・【募集】これ編集したい人twiきてください
+・デベロッパーツールのコンソールに各バフの合計値吐いてるので項目単体の数値の確認やデバッグができます
 </textarea>
 
   <br>
-            <label>よくわかってる人だけ使ってください</label><br>
+            <label></label><br>
             <input type="checkbox" id="ddd">
             <label for="ddd">ギガの攻速</label>       <br>     
             <input type="checkbox" id="fff">
@@ -2036,7 +2034,7 @@ if (!checkbox_c5.checked) {
 }
             if (checkbox_d5.checked)//ウエマス
             {
-                d5_5=110/ 1 ;
+                d5_5=110/ parseFloat(document.getElementById("weaponATK").value) ;
             }else{
               d5_5=1;
             }
