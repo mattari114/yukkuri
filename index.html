@@ -791,7 +791,13 @@
   </tr>
   </table>
 
-
+  <tr>
+  <table>
+  
+    <td>
+      <table>
+        <tr>
+          <td>
             <label>初期火力</label><br>
             <input type="number" id="ini" value="100"><br>
             <label>固定値</label><br>
@@ -800,6 +806,24 @@
             <input type="number" id="talent" value="30"><br>
             <label>レベル</label><br>
             <input type="number" id="level" value="280"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+        <tr>
+          <td>
+            <label>生存数</label><br>
+            <input type="number" id="ikiteru" value="100"><br>            
+            <label>戦闘不能数</label><br>
+            <input type="number" id="sinderu" value="100"><br>
+          </td>
+        </tr>        
+      </table>
+    </td>
+
+  </tr>
+  </table>
+  
 
   <textarea rows="10" cols="50">各キャラクターのatk才能の最大値
 魔法使い:22  狩人:22  盗賊:8  剣士:22  巫女:8  重戦士:24  鉱夫:10  鍛冶18
@@ -2031,11 +2055,11 @@ var checkbox_z6 = document.getElementById("z6");
             other = gg5 * hh5 * ii5 * kk5 * ll5 * pp5 * h5 * ddd5 * fff5 * ggg5 * hhh5 * iii5 * jjj5 * kkk5 * ppp5 * dddd5 *ssss5*d5_5;
       
     
-    console.log("通常"atk);
-    console.log("元ステ"exatk);
-    console.log("クリ"cri);
-    console.log("クリ倍率"crid);
-    console.log("独立"other);      
+    console.log("通常"+atk);
+    console.log("元ステ"+exatk);
+    console.log("クリ"+cri);
+    console.log("クリ倍率"+crid);
+    console.log("独立"+other);      
             //finish = exatk * atk * other * 0.01 * (cri * crid + 100 - cri);
             finish = (exatk * atk * cri * crid * other + exatk * atk * (100 - cri) * other) / 100 + (fix * other * cri * crid + fix * other * (100 - cri)) / 100;
       
