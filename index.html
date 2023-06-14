@@ -93,7 +93,7 @@
         <tr>
           <td>
             <input type="checkbox" id="j">
-            <label for="j">カミノチカラ</label>
+            <label for="j">カミチカラ</label>
           </td>
         </tr>
         <tr>
@@ -312,7 +312,7 @@
         <tr>
           <td>
             <input type="checkbox" id="ff">
-            <label for="ff">ラスト・侍</label>
+            <label for="ff">ラスト侍</label>
           </td>
         </tr>
         <tr>
@@ -367,7 +367,7 @@
         <tr>
           <td>
             <input type="checkbox" id="ll">
-            <label for="ll">真・天照の槍</label>
+            <label for="ll">真天照の槍</label>
           </td>
         </tr>
         <tr>
@@ -502,13 +502,13 @@
         <tr>
           <td>
             <input type="checkbox" id="yy">
-            <label for="yy">ビルド強化3</label>
+            <label for="yy">ビル強化3</label>
           </td>
         </tr>
         <tr>
           <td>
             <input type="checkbox" id="zz">
-            <label for="zz">ビルド強化4</label>
+            <label for="zz">ビル強化4</label>
           </td>
         </tr>        
         <tr>
@@ -584,7 +584,7 @@
         <tr>
           <td>            
             <input type="checkbox" id="rrrr">
-            <label for="rrrr">ブラッドレイ</label>　
+            <label for="rrrr">ブラレイ</label>　
           </td>
         </tr>
 
@@ -645,7 +645,7 @@
         <tr>
           <td>
             <input type="checkbox" id="c5">
-            <label for="c5">ヨモギブー</label>
+            <label for="c5">ヨモギ</label>
           </td>
         </tr>      
 
@@ -694,10 +694,11 @@
         <tr>
           <td>
             <br>
-            <button onclick="comparate_clear()">初回無料ガチャで上の消す</button><br> 
+            <button onclick="comparate_clear()">初回無料ガチャで上の消す</button><br><br>
+            
            <label>保存済火力の引用と割り算</label><br>
             <input type="number" id="hidari"><label> ÷ </label><input type="number" id="migi"><label> ＝ </label><input type="number" id="comparate_finish"> <br>
-            <button onclicl="slot1_hidari()">保存１</button><label>、           、</label><button onclicl="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
+            <button onclicl="slot1_hidari()">保存１</button><h3>           </h3><button onclicl="slot1_migi()">保存１</button>  <textarea rows="2" cols="15"></textarea> <br>
             <button onclicl="slot2_hidari()">　山　</button><label>、           、</label><button onclicl="slot2_hidari()">　山　</button> <br>
             <button onclicl="slot3_hidari()">　川　</button><label>、           、</label><button onclicl="slot3_hidari()">　川　</button> <br>       
 
@@ -2075,6 +2076,10 @@ if (!checkbox_c5.checked) {
             finish = (exatk * atk * cri * crid * other + exatk * atk * (100 - cri) * other) / 100 + (fix * other * cri * crid + fix * other * (100 - cri)) / 100;
       
       resultText.textContent = finish.toString();
+    }
+
+    function comparate1(){
+      document.getElementById("inputField").value = finish;
     }
     
   </script>
