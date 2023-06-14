@@ -6,9 +6,17 @@
     #result {
       font-weight: bold;
     }
+    
   </style>
 </head>
 <body>
+  
+  <style>
+  input {
+  width: 40px;
+}
+  </style>
+  
   <h1>ゆく育電卓Ω</h1>
 
   <p id="result">*のついてるの選択するならTipsを理解すること</p>
@@ -2079,10 +2087,13 @@ if (!checkbox_c5.checked) {
     }
 
     function comparate1(){
-      document.getElementById("inputField").value = finish;
+      document.getElementById("inputField").value = finish.toString();
     }
     
   </script>
+
+
+
   
 </body>
 </html>
