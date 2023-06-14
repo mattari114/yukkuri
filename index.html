@@ -888,6 +888,49 @@ ver:1.0β：多分リリース
   <script>
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~変数一覧~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+var lll;  // 任意の通常加算
+var mmm2;  // 任意の元ステ
+var nnn3;  // 任意のクリ
+var ooo4;  // 任意の倍率
+var ppp5;  // 任意の独立
+var talent;  // 任意の才能値
+var level;  // 任意のレベル
+
+var ini;  // 初期火力
+
+var realatk;  // 元ステ(実数)
+var realatk2;  // 強化後の元ステ（実数）
+var exatk;  // 初期火力と元ステ（比率）
+var atk;  // 通常（比率）
+var cri;  // クリ率
+var crid;  // 倍率
+var other;  // 独立
+var fix;  // 固定ダメ
+
+var finish;  // 算出
+
+var hidari;  // 割り算の左
+var migi;  // 割り算の右
+var comparate_finish;  // 火力同士の割り算算出
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~処理~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    function calculation() {
+      
+      var ini = parseFloat(document.getElementById("ini").value);//初期火力
+      var lll = parseFloat(document.getElementById("lll").value);//任意の通常バフ
+      var mmm2 = parseFloat(document.getElementById("mmm").value);//任意の元ステバフ
+      var nnn3 = parseFloat(document.getElementById("nnn").value);//任意のクリ率
+      var ooo4 = parseFloat(document.getElementById("ooo").value);//任意のクリ倍率
+      var ppp5 = parseFloat(document.getElementById("ppp").value);//任意の独立
+      var fix = parseFloat(document.getElementById("fix").value);//任意の固定値
+      var talent = parseFloat(document.getElementById("talent").value);//任意の才能値
+      var level = parseFloat(document.getElementById("level").value);//任意のレベル
+      
+      var resultText = document.getElementById("result");//計算結果表示用のテキスト取得
+
 var a;  // アタックフィールド1
 var b;  // アタックフィールド2
 var c;  // アタックフィールド3
@@ -998,48 +1041,8 @@ var hhh5;  // 攻撃速度1
 var iii5;  // 2
 var jjj5;  // 3
 var kkk5;  // 4
-
-var lll;  // 任意の通常加算
-var mmm2;  // 任意の元ステ
-var nnn3;  // 任意のクリ
-var ooo4;  // 任意の倍率
-var ppp5;  // 任意の独立
-var talent;  // 任意の才能値
-var level;  // 任意のレベル
-
-var ini;  // 初期火力
-
-var realatk;  // 元ステ(実数)
-var realatk2;  // 強化後の元ステ（実数）
-var exatk;  // 初期火力と元ステ（比率）
-var atk;  // 通常（比率）
-var cri;  // クリ率
-var crid;  // 倍率
-var other;  // 独立
-var fix;  // 固定ダメ
-
-var finish;  // 算出
-
-var hidari;  // 割り算の左
-var migi;  // 割り算の右
-var comparate_finish;  // 火力同士の割り算算出
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~処理~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
-    function calculation() {
       
-      var ini = parseFloat(document.getElementById("ini").value);//初期火力
-      var lll = parseFloat(document.getElementById("lll").value);//任意の通常バフ
-      var mmm2 = parseFloat(document.getElementById("mmm").value);//任意の元ステバフ
-      var nnn3 = parseFloat(document.getElementById("nnn").value);//任意のクリ率
-      var ooo4 = parseFloat(document.getElementById("ooo").value);//任意のクリ倍率
-      var ppp5 = parseFloat(document.getElementById("ppp").value);//任意の独立
-      var fix = parseFloat(document.getElementById("fix").value);//任意の固定値
-      var talent = parseFloat(document.getElementById("talent").value);//任意の才能値
-      var level = parseFloat(document.getElementById("level").value);//任意のレベル
       
-
-      var resultText = document.getElementById("result");//計算結果表示用のテキスト取得
 //チェックボックス取得ターイム～～～～あるのもないのも全部ごり押し取得～～～～～～～～～
       
 var checkbox_a = document.getElementById("a");
