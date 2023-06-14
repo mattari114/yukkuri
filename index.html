@@ -608,13 +608,13 @@
             <br>
             <button onclick="comparate1()">保存１</button>
             <input type="number" id="slot1">
-            <textarea rows="3" cols="10"></textarea>
+            <textarea rows="3" cols="10">メモ</textarea>
           </td>
         </tr>
         <tr>
           <td>
             <br>
-            <button onclick="comparate2()">山</button>
+            <button onclick="comparate2()">　山　</button>
             <input type="number" id="slot2">
             <textarea rows="3" cols="10"></textarea>
           </td>
@@ -622,11 +622,27 @@
         <tr>
           <td>
             <br>
-            <button onclick="comparate3()">川</button>
+            <button onclick="comparate3()">　川　</button>
             <input type="number" id="slot3">
             <textarea rows="3" cols="10"></textarea>
           </td>
         </tr>
+        <tr>
+          <td>
+            <br>
+            <button onclick="comparate_clear()">初回無料ガチャで上の消す</button><br>
+           <label>保存済火力の引用と割り算</label><br>
+            <input type="number" id="hidari"><label> ÷ </label><input type="number" id="migi"><label> ＝ </label><input type="number" id="comparate_finish"> <br>
+
+
+
+
+
+
+            
+          </td>
+        </tr>
+        
       </table>
     </td>    
     
@@ -873,7 +889,7 @@ var finish;  // 算出
 
 var hidari;  // 割り算の左
 var migi;  // 割り算の右
-var finish2;  // 火力同士の割り算算出
+var comparate_finish;  // 火力同士の割り算算出
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~処理~~~~~~~~~~~~~~~~~~~~~~~~~~
     
