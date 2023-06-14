@@ -1456,7 +1456,7 @@ var checkbox_z6 = document.getElementById("z6");
             }
             if (checkbox_ee.checked)
             {
-                ee = 75;
+                ee = 25parseFloat(document.getElementById("ikiteru").value);
             }
             else
             {
@@ -1963,9 +1963,9 @@ if (!checkbox_pppp.checked) {
 }
             if (checkbox_qqqq.checked)//生と死
             {
-                qqqq=qqqq*1;
-                qqqq3=qqqq3*1;
-                qqqq4=qqqq4*1;
+                qqqq=qqqq*parseFloat(document.getElementById("sinderu").value);
+                qqqq3=qqqq3*parseFloat(document.getElementById("sinderu").value);
+                qqqq4=qqqq4*parseFloat(document.getElementById("sinderu").value);
             }else{
               qqqq=0;qqqq3=0;qqqq4=0;
             }
